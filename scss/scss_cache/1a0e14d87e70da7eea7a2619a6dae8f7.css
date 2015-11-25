@@ -1,0 +1,155 @@
+/* compiled by scssphp v0.0.12 on Tue, 23 Dec 2014 23:20:19 +0100 (0.0242s) */
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,700,900);
+body {
+  font: 16px/26px 'Roboto', sans-serif;
+  background: #111; }
+
+bold {
+  font-weight: 700; }
+
+header {
+  font-size: 13px;
+  color: #fff;
+  background: #750197;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  top: 0; }
+  header h1 {
+    font-size: 1em;
+    margin: 0;
+    padding: 8px 22px 8px 20px;
+    float: left;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.5; }
+  header .stats {
+    float: right;
+    opacity: 0.5;
+    padding: 8px 20px; }
+  header nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+    header nav li {
+      float: left;
+      margin-right: 1px; }
+    header nav a {
+      color: #fff;
+      text-decoration: none;
+      display: inline-block;
+      padding: 8px 16px;
+      background: #9800c4; }
+      header nav a:hover {
+        background: #af00e1; }
+
+h1, h2, h3 {
+  font-weight: 400; }
+
+h3 {
+  margin-top: 0; }
+
+.main-container {
+  margin-top: 42px; }
+
+#sys_message_overlay {
+  position: fixed;
+  z-index: 100;
+  top: 40%;
+  left: 50%;
+  width: 500px;
+  margin-left: -250px;
+  background: #111;
+  color: #9800c4;
+  display: none;
+  padding: 20px;
+  text-align: center; }
+
+#lean_overlay {
+  position: fixed;
+  z-index: 100;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  display: none; }
+
+.btn {
+  background: #9800c4;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 8px 16px; }
+  .btn:hover {
+    background: #af00e1; }
+
+.modal {
+  display: none;
+  background: #111;
+  color: #fff;
+  padding: 20px; }
+
+.fancybox-close {
+  top: 0;
+  right: 0; }
+
+.fancybox-close, .fancybox-prev span, .fancybox-next span {
+  background: #111;
+  padding: 4px 12px;
+  color: #fff;
+  box-sizing: border-box;
+  opacity: 0.6; }
+  .fancybox-close:hover, .fancybox-prev span:hover, .fancybox-next span:hover {
+    background: #9800c4;
+    opacity: 1; }
+
+.gallery {
+  overflow: hidden;
+  /* ==========================================================================
+   Media Queries
+   ========================================================================== */ }
+  .gallery .box {
+    float: left;
+    position: relative;
+    margin-bottom: 4px; }
+    .gallery .box .inner {
+      height: 320px;
+      background: #9800c4;
+      box-sizing: border-box;
+      padding: 20px;
+      display: table-cell;
+      vertical-align: bottom; }
+    .gallery .box h3 {
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      font-size: 22px; }
+  .gallery .image {
+    float: left; }
+    .gallery .image img {
+      height: 320px;
+      width: auto; }
+    .gallery .image .functions {
+      position: absolute;
+      top: 0;
+      right: 0; }
+      .gallery .image .functions ul {
+        overflow: hidden;
+        list-style: none;
+        margin: 0; }
+      .gallery .image .functions li {
+        float: left;
+        margin-left: 1px; }
+      .gallery .image .functions a {
+        display: inline-block;
+        padding: 4px 12px;
+        background: #111;
+        color: #bbb;
+        text-decoration: none;
+        opacity: 0.6; }
+      .gallery .image .functions a:hover {
+        background: #9800c4;
+        opacity: 1; }
