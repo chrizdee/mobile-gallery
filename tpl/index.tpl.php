@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Marlene</title>
+        <title>mobileGallery</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -28,7 +28,7 @@
         </div>
 
         <header>
-            <h1>Marlene Gallery</h1>
+            <h1>mobileGallery</h1>
             <div class="stats"><?= $total ?> images found</div>
             <nav>
                 <ul>
