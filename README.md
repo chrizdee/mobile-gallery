@@ -10,3 +10,4 @@ A tiny gallery, based on php, jquery with mobile upload function.
 * You can also upload images from your mobile. There are many apps out there. I use ["Send With FTP"](http://michael.totschnig.org/SendWithFtp/) on Android.
 * Use the cron.sh for an automatically image import. You have to change the path in cron.sh!
 
+** Have fun! **
