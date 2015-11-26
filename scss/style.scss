@@ -24,6 +24,7 @@ header {
 	color: $c_high;
 	background: $c_highlight_dark;
 	position: fixed;
+	overflow: hidden;
 	z-index: 1;
 	width: 100%;
 	top: 0;
@@ -46,6 +47,8 @@ header {
 	}
 
 	nav {
+		float: left;
+		
 		ul {
 			margin: 0;
 			padding: 0;
