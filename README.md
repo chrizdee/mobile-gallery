@@ -1,6 +1,10 @@
 # mobile-gallery
 A tiny gallery, based on php, jquery with mobile upload function.
 
+## Demo
+
+http://mobile-gallery.novo-media.com
+
 ## Setup
 
 * Copy all files to your webserver
