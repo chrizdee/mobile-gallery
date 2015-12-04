@@ -16,3 +16,8 @@ http://mobile-gallery.novo-media.com
 * Create your own style with /scss/style.scss
 
 **Have fun!**
+
+License
+-------
+
+It is licensed under the terms of the LGPLv3.
