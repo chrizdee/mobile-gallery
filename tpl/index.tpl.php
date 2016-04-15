@@ -17,6 +17,7 @@
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
         <link rel="stylesheet" href="style.php/style.scss">
 
+        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -30,15 +31,13 @@
         <header>
             <h1>mobileGallery</h1>
             <div class="stats"><?= $total ?> images found</div>
+            <?php if ($_GET['admin'] == 'true'): ?>
             <nav>
                 <ul>
-                    <li><a href="<?= $previous ?>" class="previous"><i class="fa fa-chevron-left"></i> Previous</a></li>
-                    <li><a href="<?= $next ?>" class="next">Next <i class="fa fa-chevron-right"></i></a></li>
-                    <?php if ($_GET['admin'] == 'true'): ?>
                     <li><a href="javascript:importMedia();"><i class="fa fa-upload"></i> Import</a></li>
-                    <?php endif ?>
                 </ul>
             </nav>
+            <?php endif ?>
         </header>
 
         <div class="main-container">
@@ -86,6 +85,15 @@
             </div>
         </div>
 
+        <footer>
+            <nav>
+                <ul>
+                    <li><a href="<?= $previous ?>" class="previous"><i class="fa fa-chevron-left"></i> Previous</a></li>
+                    <li><a href="<?= $next ?>" class="next">Next <i class="fa fa-chevron-right"></i></a></li>
+                </ul>
+            </nav>
+        </footer>
+
         <?php if ($_GET['admin'] == 'true'): ?>
         <div id="modalDeleteMedium" class="modal">
             <h3>Sure, you want to delete this medium?</h3>
@@ -93,7 +101,6 @@
         </div>
         <?php endif ?>
 
-        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
         <script type="text/javascript" src="js/vendor/jquery.fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>

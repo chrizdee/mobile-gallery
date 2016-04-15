@@ -15,11 +15,16 @@ body {
     background: $c_bg;
 }
 
+* {
+	box-sizing: border-box;
+}
+
 bold {
 	font-weight: 700;
 }
 
-header { 
+header,
+footer { 
 	font-size: 13px; 
 	color: $c_high;
 	background: $c_highlight_dark;
@@ -54,20 +59,50 @@ header {
 			padding: 0;
 			list-style: none;
 		}
+
 		li {
 			float: left;
-			margin-right: 1px;
 		}
+
 		a { 
 			color: $c_high;
 			text-decoration: none;
 			display: inline-block;
 			padding: 8px 16px;
 			background: $c_highlight;
+			border-right: 1px solid $c_highlight_dark;
 			&:hover { background: $c_hover; }
-		}	
+		}
+
+		li:last-child a {
+			border: 0;
+		}
 	}
-	
+}
+
+footer {
+	top: auto;
+	bottom: 0;
+	padding-top: 1px;
+	text-align: center;
+	font-size: 1.2em;
+
+	nav {
+		float: none;
+		width: 100%;
+
+		ul {
+			width: 100%;
+		}
+
+		li {
+			width: 50%;
+		}
+
+		a {
+			width: 100%;
+		}
+	}
 }
 
 h1, h2, h3 { 
@@ -79,7 +114,7 @@ h3 {
 }
 
 .main-container { 
-	margin-top: 42px;
+	margin: 42px 0 39px;
 }
 
 #sys_message_overlay {
