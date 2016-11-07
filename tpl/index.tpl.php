@@ -66,16 +66,17 @@
                     <?php else: ?>
 
                     <div class="box image" id="img<?= $i ?>">
-                        <a href="<?= $medium['big'] ?>" rel="group" class="fancybox"><img src="<?= $medium['small'] ?>"></a>
-                        <?php if ($_GET['admin'] == 'true'): ?>
+                        <a href="<?= $medium['big'] ?>" rel="group" class="fancybox"><img src="<?= $medium['small'] ?>" srcset="<?= $medium['big'] ?> 2x"></a>
                         <nav class="functions">
                             <ul>
+                                <li><a href="dl.php?image=<?= $medium['src'] ?>"><i class="fa fa-download"></i></a></li>
+                                <?php if ($_GET['admin'] == 'true'): ?>
                                 <li><a href="javascript:rotateMedium('<?= $medium['name'] ?>', -90);"><i class="fa fa-rotate-left"></i></a></li>
                                 <li><a href="javascript:rotateMedium('<?= $medium['name'] ?>', 90);"><i class="fa fa-rotate-right"></i></a></li>
                                 <li><a href="#modalDeleteMedium" rel="leanModal" onclick="actMedium='<?= $medium['name'] ?>'; actMediumId='img<?= $i ?>'"><i class="fa fa-remove"></i></a></li>
+                                <?php endif ?>
                             </ul>
                         </nav>
-                        <?php endif ?>
                     </div>
 
                     <?php endif ?>

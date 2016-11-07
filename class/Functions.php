@@ -53,7 +53,7 @@ function getMedium($medium, $format = 'small')
 			    
 			    switch ($format) {
 			    	case 'big':
-			    		$img->auto_orient()->best_fit(1000, 1000)->save($targetMedium, 90);
+			    		$img->auto_orient()->fit_to_width(1080)->save($targetMedium, 90);
 			    		break;
 			    	
 			    	default:
