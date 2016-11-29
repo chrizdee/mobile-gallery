@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="<?= $lang ?>">
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
@@ -6,7 +7,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>mobileGallery</title>
+        <title><?= $_L['Gallery'] ?></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -29,12 +30,12 @@
         </div>
 
         <header>
-            <h1>mobileGallery</h1>
-            <div class="stats"><?= $total ?> images found</div>
+            <h1><?= $_L['Gallery'] ?></h1>
+            <div class="stats"><?= $total ?> <?= $_L['images found'] ?></div>
             <?php if ($_GET['admin'] == 'true'): ?>
             <nav>
                 <ul>
-                    <li><a href="javascript:importMedia();"><i class="fa fa-upload"></i> Import</a></li>
+                    <li><a href="javascript:importMedia();"><i class="fa fa-upload"></i> <?= $_L['Import'] ?></a></li>
                 </ul>
             </nav>
             <?php endif ?>
@@ -69,8 +70,8 @@
                         <a href="<?= $medium['big'] ?>" rel="group" class="fancybox"><img src="<?= $medium['small'] ?>" srcset="<?= $medium['big'] ?> 2x"></a>
                         <nav class="functions">
                             <ul>
-                                <li><a href="dl.php?image=<?= $medium['src'] ?>"><i class="fa fa-download"></i></a></li>
-                                <?php if ($_GET['admin'] == 'true'): ?>
+                            	<li><a href="dl.php?image=<?= $medium['src'] ?>"><i class="fa fa-download"></i></a></li>
+                            	<?php if ($_GET['admin'] == 'true'): ?>
                                 <li><a href="javascript:rotateMedium('<?= $medium['name'] ?>', -90);"><i class="fa fa-rotate-left"></i></a></li>
                                 <li><a href="javascript:rotateMedium('<?= $medium['name'] ?>', 90);"><i class="fa fa-rotate-right"></i></a></li>
                                 <li><a href="#modalDeleteMedium" rel="leanModal" onclick="actMedium='<?= $medium['name'] ?>'; actMediumId='img<?= $i ?>'"><i class="fa fa-remove"></i></a></li>
@@ -89,16 +90,16 @@
         <footer>
             <nav>
                 <ul>
-                    <li><a href="<?= $previous ?>" class="previous"><i class="fa fa-chevron-left"></i> Previous</a></li>
-                    <li><a href="<?= $next ?>" class="next">Next <i class="fa fa-chevron-right"></i></a></li>
+                    <li><a href="<?= $previous ?>" class="previous"><i class="fa fa-chevron-left"></i> <?= $_L['Previous'] ?></a></li>
+                    <li><a href="<?= $next ?>" class="next"><?= $_L['Next'] ?> <i class="fa fa-chevron-right"></i></a></li>
                 </ul>
             </nav>
         </footer>
 
         <?php if ($_GET['admin'] == 'true'): ?>
         <div id="modalDeleteMedium" class="modal">
-            <h3>Sure, you want to delete this medium?</h3>
-            <p><a href="javascript:deleteMedium(actMedium, actMediumId);" class="btn modal_close"><i class="fa fa-trash"></i> Yes, delete</a></p>
+            <h3><?= $_L['Sure, you want to delete this medium?'] ?></h3>
+            <p><a href="javascript:deleteMedium(actMedium, actMediumId);" class="btn modal_close"><i class="fa fa-trash"></i> <?= $_L['Yes, delete'] ?></a></p>
         </div>
         <?php endif ?>
 

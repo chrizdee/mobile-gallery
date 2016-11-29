@@ -7,6 +7,13 @@ include('class/Template.class.php');
 include('class/Functions.php');
 include('class/Pagination.class.php');
 
+// Detect language
+$lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
+if (file_exists('lang/lang.' . $lang . '.php'))
+	include('lang/lang.' . $lang . '.php');
+else
+	include('lang/lang.en.php');
+
 // Load template engine
 $template = new Template(); 
 $template->defaultPath = 'tpl/';
@@ -15,6 +22,8 @@ $template->defaultPath = 'tpl/';
 $gallery = getGallery();
 $template->assign('gallery', $gallery['list']);
 $template->assign('total', $gallery['total']);
+$template->assign('_L', $_L);
+$template->assign('lang', $lang);
 
 // Build pager
 $nav = new Pagination($settings['imagesPerPage'], $gallery['total'], 6, 'page');
