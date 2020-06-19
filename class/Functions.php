@@ -84,7 +84,14 @@ function importMedia()
 		if ($file != "." && $file != ".." && $file != ".ftpquota") 
 		{
 			$src_image = $settings['importDir'].$file;
-			$dest_image = $media_path.'src/'.date('Ymd', filemtime($src_image)).'-IMG_'.time().'-'.$i++.'.jpg';
+			
+			$exif = exif_read_data($src_image, 0, true);
+			if ($exif['EXIF']['DateTimeOriginal'])
+				$filename = str_replace(':', '', str_replace(' ', '_', $exif['EXIF']['DateTimeOriginal'])).'-IMG_'.time().'-'.$i++.'.jpg';
+			else
+				$filename = date('Ymd', filemtime($src_image)).'-IMG_'.time().'-'.$i++.'.jpg';
+			
+			$dest_image = $media_path.'src/'.$filename;
 
 		    if (copy($src_image, $dest_image)) 
 		    {
